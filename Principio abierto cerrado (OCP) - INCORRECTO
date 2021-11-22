@@ -1,0 +1,34 @@
+/*
+* Esta clase no cumple con el principio de OCP* 
+*/
+class BookBadOCP {
+    /** Propiedades o atributos (Caracteristicas del objeto) */
+    title: string;
+    author: string;
+    editorial: string;
+    pagerNumber: number;
+
+    /** Métodos (Funciones o acciones del objeto) */
+    getTitle(): string {
+        return this.title = 'La divina comedia-infierno';
+    }
+
+    getAuthor(): string {
+        return this.author = 'Dante Alighieri';
+    }
+
+    getEditorial(): string {
+        return this.editorial= 'El oceano';
+    }
+
+    getPagerNumber(): number {
+        return this.pagerNumber = 274;
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var bookBadOCP = new BookBadOCP();
+console.log('OCP1-Bad:', bookBadOCP.getTitle());
+console.log('OCP2-Bad:', bookBadOCP.getAuthor());
+console.log('OCP3-Bad:', bookBadOCP.getEditorial());
+console.log('OCP4-Bad:', bookBadOCP.getPagerNumber());
