@@ -1,0 +1,48 @@
+/**
+ * Este ejemplo cumple el principio ISP
+ */
+
+ interface IFishBird {
+    swim();
+}
+
+interface IEagleBird {
+    fly();
+}
+
+class FishISP2 implements IFishBird {
+    swim() {
+        return 'Simplemente nada';
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var fishISP2 = new FishISP2();
+console.log('ISP5-Good:', fishISP2.swim());
+
+
+class EageleISP2 implements IEagleBird {
+    fly() {
+        return 'Simpelmente vuela';
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var eageleISP2 = new EageleISP2();
+console.log('ISP6-Good:', eageleISP2.fly());
+
+
+FUNCIONAMIENTO
+
+
+ISP1-Bad: Este pez no vuela
+
+ISP2-Bad: Este pez nada
+
+ISP3-Bad: Esta ave vuela
+
+ISP4-Bad: Este ave no nada
+
+ISP5-Good: Simplemente nada
+
+ISP6-Good: Simpelmente vuela
