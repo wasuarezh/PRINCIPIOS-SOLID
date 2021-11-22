@@ -1,0 +1,39 @@
+/**
+ * Este ejemplo no cumple el principio ISP
+ */
+
+ interface IBird {
+    /** Métodos a implementar en clases */
+    fly();
+    swim();
+}
+class FishISP implements IBird {
+    /** Métodos (Funciones o acciones del objeto) */
+    fly() {
+        return 'Este pez no vuela';
+    }
+    swim() {
+        return 'Este pez nada';
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var fishISP = new FishISP();
+console.log('ISP1-Bad:', fishISP.fly());
+console.log('ISP2-Bad:', fishISP.swim());
+
+
+class EageleISP implements IBird {
+    /** Métodos (Funciones o acciones del objeto) */
+    fly() {
+        return 'Esta ave vuela';
+    }
+    swim() {
+        return 'Este ave no nada';
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var eageleISP = new EageleISP();
+console.log('ISP3-Bad:', eageleISP.fly());
+console.log('ISP4-Bad:', eageleISP.swim());
