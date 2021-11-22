@@ -1,0 +1,41 @@
+/**
+ * Estas clases ya cumple con el principio de DIP 
+ */
+
+ interface ISocialLogin {
+    /** Métodos a implementar en clases */
+    login(options: any);
+ }
+
+class AmazonLogin implements ISocialLogin {
+    /** Métodos (Funciones o acciones del objeto) */
+    login(AmazonLogin: any) { 
+        // Logica para utilizar el inicio de sesión de Amazon.
+        return AmazonLogin;
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var AmazonLogin = new AmazonLogin();
+console.log('DIP2-Good:', AmazonLogin.login('Login Amazon'));
+
+
+class FBLogin implements ISocialLogin {
+    /** Métodos (Funciones o acciones del objeto) */
+    login(ntLogin: any) { 
+        // Logica para utilizar el inicio de sesión de Netflix.
+        return ntLogin;
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var ntLogin = new NTLogin();
+console.log('DIP3-Good:', ntLogin.login('Login Netflix'));
+
+FUNCIONAMIENTO
+
+DIP1-Bad: Cliente no decide red social para el login, pero requiere login
+
+DIP2-Good: Login Amazon
+
+DIP3-Good: Login Netflix
