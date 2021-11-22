@@ -1,0 +1,14 @@
+/**
+ * Esta clase no cumple con el principio de DIP 
+ */
+
+ class Login { 
+    login(noSocialNetwork: any) { 
+        // Logica para utilizar el inicio de sesión de Amazon.
+        return noSocialNetwork;
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var login = new Login();
+console.log('DIP1-Bad:', login.login('Cliente no decide red social para el login, pero requiere login'));
