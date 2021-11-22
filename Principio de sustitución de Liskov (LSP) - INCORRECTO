@@ -1,0 +1,28 @@
+/**
+ * En estas clase no cumplen el principio LSP
+ */
+class BirdBad {
+    /** Métodos (Funciones o acciones del objeto) */
+    fly() {
+        console.log('LSP1-Bad: Ellos pueden volar!');
+    }
+}
+
+class FlyingFish extends BirdBad {
+    constructor() {
+        super()
+    }
+}
+
+class Eagle extends BirdBad {
+    constructor() {
+        super()
+    }
+}
+
+/** Instancia del objeto en una variable e impresión en consola */
+var flyingFish = new FlyingFish();
+flyingFish.fly();
+
+var eagle = new Eagle();
+eagle.fly();
