@@ -1,7 +1,5 @@
 /*
 * Estas clases cumplen con el principio de SRP, ya que se dividen en diferentes clases
-* obteniendo atributos propios del libro en una clase, eventos en otra clase y operaciones en 
-* otra clase.
 */
 class BookGood {
     /** Propiedades o atributos (Caracteristicas del objeto) */
@@ -76,3 +74,28 @@ var printerGood = new Printer();
 console.log('SRP10-Good:', printerGood.printPageInHTML('Imprime pagina actual en HTML'));
 console.log('SRP11-Good:', printerGood.printPageInJSON('Imprime pagina actual en JSON'));
 console.log('SRP12-Good:', printerGood.printPageInXML('Imprime pagina actual en XML'));
+
+Funcionamiento
+SRP1-Bad: La divina comedia-infierno
+
+SRP2-Bad: Dante Alighieri
+
+SRP3-Bad: Pagina anterior 1, pagina siguiente 10, pagina especifica 8
+
+SRP4-Bad: Contenido de la página actual para imprimir
+
+SRP5-Good: La divina comedia-paraiso
+
+SRP6-Good: Dante Alighieri
+
+SRP7-Good: pagina anterior 1
+
+SRP8-Good: pagina siguiente 10
+
+SRP9-Good: pagina especifica 8
+
+SRP10-Good: Imprime pagina actual en HTML
+
+SRP11-Good: Imprime pagina actual en JSON
+
+SRP12-Good: Imprime pagina actual en XML
