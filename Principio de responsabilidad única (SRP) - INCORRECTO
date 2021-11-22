@@ -1,7 +1,5 @@
 /*
 * Esta clase no cumple con el principio de SRP, ya que en una sola clase está obteniendo atributos
-* de la clase book, está paginando el libro y está imprimiendo la pagina actual del libro.
-* 
 */
 class BookBad {
     /** Propiedades o atributos (Caracteristicas del objeto) */
